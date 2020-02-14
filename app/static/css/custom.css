@@ -1,0 +1,23 @@
+.signin{
+  max-width: 50px;
+  position: absolute;
+  left: 85vw;
+}
+.logo{
+  max-width: 800px;
+}
+/* .zoomin{
+  max-width: 500px;
+} */
+@media screen and (orientation:landscape){
+  .zoomin{
+    max-width: 600px;
+  }
+}
+.SLACK{
+  zoom:2.9;
+}
+
+.addslack{
+  zoom:1.1;
+}
