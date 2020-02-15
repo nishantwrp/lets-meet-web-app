@@ -1,5 +1,6 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.contrib.auth import login, logout
+from django.contrib.auth.models import User
 import requests
 
 def send_api_request(url ,data = None, request = None):
@@ -44,7 +45,7 @@ def signUpView(request):
                     user.last_name = request.POST['last_name']
                     user.save()
                 login(request, user)
-                # Post Login Code
+                return redirect(dashboardView)
         else:
             data = {
                 "email": request.POST['login_email'],
@@ -55,6 +56,39 @@ def signUpView(request):
                 token_json = r.json()
                 user, created = User.objects.get_or_create(username=token_json['token'])
                 login(request, user)
-                # Post Login Code
+                return redirect(dashboardView)
 
     return render(request, 'signup.html', context)
+
+def dashboardView(request):
+    context = {}
+
+    def logout_user(request):
+        if 'logout' in request.GET:
+            if request.GET['logout'] == 'true':
+                logout(request)
+                return True
+        return False
+
+    context['name'] = request.user.first_name + ' ' + request.user.last_name
+
+    r = send_api_request('meets/',request=request)
+
+    context['meets'] = r.json()
+
+    return render(request, 'dashboard.html', context)
+
+def scheduleView(request):
+    context = {}
+
+
+    def logout_user(request):
+        if 'logout' in request.GET:
+            if request.GET['logout'] == 'true':
+                logout(request)
+                return True
+        return False
+
+    context['name'] = request.user.first_name + ' ' + request.user.last_name
+
+    return render(request, 'schedule.html', context)

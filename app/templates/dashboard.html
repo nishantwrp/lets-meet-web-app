@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title></title>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css'>
+  <link rel='stylesheet' href='https://static.fontawesome.com/css/fontawesome-app.css'>
+  <link rel='stylesheet' href='https://pro.fontawesome.com/releases/v5.2.0/css/all.css'>
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto:400,700'>
+  <link rel="stylesheet" href="/static/dashboard/style.css">
+
+</head>
+
+<body>
+  <div class="user" style="position:absolute;">
+    <a>{{ name }}</a><i class="fas fa-user-circle"></i> | <a href = "?logout=true" style="color: black;"><i class="fas fa-sign-out-alt"></i></a>
+  </div>
+  <div class="showcase" style="position:absolute;">
+    <h1>You are all set!</h1>
+    <h6><span class="bold2"> “ Your Let's Meet</span><span class="bold"> will soon be conducted as the invitees pick
+        there slots too! Hope Let's Meet stays your favorite platform to gather a meeting... Spend more time with people
+        and less time scheduling meetings.</span></h6>
+    <h3>Your Previous Let's Meet</h3>
+  </div>
+  <!-- partial:index.partial.html -->
+
+  <div class="options">
+    <div class="option active"
+      style="--optionBackground:url(http://www.upl.co/uploads/gettyimages6764342481581706588.jpg);">
+      <div class="shadow">
+        <p>Artificial Neural Network's scope in identification and cure of lung cancer <br> <br><span class="bold">Task
+            Assigned:</span> Learn overfitting, tensorflow and keras. Understand backpropagation and build a simple
+          model to distinguish dogs and cats. <br><br><br><button id="modalBtn" class="button0">know more</button></p>
+      </div>
+      <div class="label">
+        <div class="icon">
+          <i class="fas fa-network-wired"></i>
+        </div>
+        <div class="info">
+          <div class="main">Let's Meet on ANN</div>
+
+        </div>
+
+      </div>
+    </div>
+
+    <div class="option" style="--optionBackground:url(http://www.upl.co/uploads/AWSPartnerNetwork61581706368.png);">
+      <div class="shadow">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea, laudantium! <br> <br><span class="bold">Task
+            Assigned:</span> Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+          Numquam, eos.<br><br><br><button id="modalBtnB" class="button0">know more</button></p>
+      </div>
+      <div class="label">
+        <div class="icon">
+          <i class="fab fa-aws"></i>
+        </div>
+        <div class="info">
+          <div class="main">Let's Meet on AWS</div>
+
+        </div>
+      </div>
+    </div>
+    <div class="option" style="--optionBackground:url(http://www.upl.co/uploads/171755java1581706935.jpg);">
+      <div class="shadow">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea, laudantium! <br> <br><span class="bold">Task
+            Assigned:</span> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam distinctio, voluptate,
+          veritatis modi eveniet nobis.<br><br><br><button id="modalBtnC" class="button0">know more</button></p>
+      </div>
+      <div class="label">
+        <div class="icon">
+          <i class="fab fa-java"></i>
+        </div>
+        <div class="info">
+          <div class="main">Let's Meet on Java</div>
+
+        </div>
+      </div>
+    </div>
+    <div class="option"
+      style="--optionBackground:url(http://www.upl.co/uploads/461264reactJSFacebookJavaScriptminimalismartworksimplebackground1581705718.jpg);">
+      <div class="shadow">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea, laudantium! <br> <br><span class="bold">Task
+            Assigned:</span> Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+          Numquam, eos.<br><br><br><button id="modalBtnD" class="button0">know more</button></p>
+      </div>
+      <div class="label">
+        <div class="icon">
+          <i class="fab fa-react"></i>
+        </div>
+        <div class="info">
+          <div class="main">Let's Meet on React</div>
+
+        </div>
+      </div>
+    </div>
+    <div class="option" style="--optionBackground:url(http://www.upl.co/uploads/thumb3504309441581705534.jpg);">
+      <div class="shadow">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea, laudantium! <br> <br><span class="bold">Task
+            Assigned:</span> Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+          Numquam, eos.<br><br><br><button id="modalBtnE" class="button0">know more</button></p>
+      </div>
+      <div class="label">
+        <div class="icon">
+          <i class="fas fa-code-branch"></i>
+        </div>
+        <div class="info">
+          <div class="main">Let's Meet on Git</div>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <div class="abs" style="position:absolute">
+    <div id="simpleModal" class="modal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <span class="closeBtn">&times;</span>
+
+          <h2>Meeting Minutes</h2>
+        </div>
+        <div class="modal-body">
+
+
+          <p><strong>Title:</strong> Meeting<br>
+            <strong>Date:</strong> Day 00/00/2016<br>
+            <strong>Time:</strong> 00:00AM - 00:00PM<br>
+            <strong>Location:</strong> Room</p>
+          <hr>
+
+          <p><strong>Heading Ordered list</strong></p>
+          <ol>
+            <li>Item</li>
+            <li>Item</li>
+            <li>Item</li>
+          </ol>
+          <p><strong>Task Assigned to Invitees</strong></p>
+          <p>A assigned to <span class="bold">abc@gmail.com</span></p>
+          <p>B assigned to <span class="bold">efg@gmail.com</span></p>
+          <style media="screen">
+            hr {
+              background-color: #bbb;
+              height: 2px;
+              border: none;
+            }
+
+            hr:nth-child(3) {
+              background-color: #09c;
+              height: 2px;
+              border: none;
+            }
+          </style>
+
+
+          <div id="myDIV" class="header">
+            <h2 style="margin:5px; font-weight:lighter;">Add Something</h2>
+            <input type="text" id="myInput" placeholder="Title...">
+            <span onclick="newElement()" class="addBtn">Add Task</span>
+          </div>
+
+          <ul id="myUL">
+            <li>Study Keras</li>
+            <li class="checked">Tensorflow basic</li>
+            <li>Learn backpropagation</li>
+            <li>Make a basic model</li>
+            <li>Read some book</li>
+            <li>Watch AK Bhadesia's Lectures</li>
+          </ul>
+
+          <script>
+            // Create a "close" button and append it to each list item
+            var myNodelist = document.getElementsByTagName("LI");
+            var i;
+            for (i = 0; i < myNodelist.length; i++) {
+              var span = document.createElement("SPAN");
+              var txt = document.createTextNode("\u00D7");
+              span.className = "close";
+              span.appendChild(txt);
+              myNodelist[i].appendChild(span);
+            }
+
+            // Click on a close button to hide the current list item
+            var close = document.getElementsByClassName("close");
+            var i;
+            for (i = 0; i < close.length; i++) {
+              close[i].onclick = function () {
+                var div = this.parentElement;
+                div.style.display = "none";
+              }
+            }
+
+            // Add a "checked" symbol when clicking on a list item
+            var list = document.querySelector('ul');
+            list.addEventListener('click', function (ev) {
+              if (ev.target.tagName === 'LI') {
+                ev.target.classList.toggle('checked');
+              }
+            }, false);
+
+            // Create a new list item when clicking on the "Add" button
+            function newElement() {
+              var li = document.createElement("li");
+              var inputValue = document.getElementById("myInput").value;
+              var t = document.createTextNode(inputValue);
+              li.appendChild(t);
+              if (inputValue === '') {
+                alert("You must write something!");
+              } else {
+                document.getElementById("myUL").appendChild(li);
+              }
+              document.getElementById("myInput").value = "";
+
+              var span = document.createElement("SPAN");
+              var txt = document.createTextNode("\u00D7");
+              span.className = "close";
+              span.appendChild(txt);
+              li.appendChild(span);
+
+              for (i = 0; i < close.length; i++) {
+                close[i].onclick = function () {
+                  var div = this.parentElement;
+                  div.style.display = "none";
+                }
+              }
+            }
+          </script>
+
+        </div>
+        <div class="modal-footer">
+          <h3>By Let's Meet</h3>
+        </div>
+      </div>
+    </div>
+
+
+    <div id="simpleModalB" class="modalB">
+      <div class="modal-content">
+        <div class="modal-header">
+          <span class="closeBtnB">&times;</span>
+
+          <h2>Meeting Minutes</h2>
+        </div>
+        <div class="modal-body">
+          <p><strong>Title:</strong> Meeting<br>
+            <strong>Date:</strong> Day 00/00/2016<br>
+            <strong>Time:</strong> 00:00AM - 00:00PM<br>
+            <strong>Location:</strong> Room</p>
+          <hr>
+
+          <p><strong>Heading Ordered list</strong></p>
+          <ol>
+            <li>Item</li>
+            <li>Item</li>
+            <li>Item</li>
+          </ol>
+          <p><strong>Task Assigned to Invitees</strong></p>
+          <p>A assigned to <span class="bold">abc@gmail.com</span></p>
+          <p>B assigned to <span class="bold">efg@gmail.com</span></p>
+          <style media="screen">
+            hr {
+              background-color: #bbb;
+              height: 2px;
+              border: none;
+            }
+
+            hr:nth-child(3) {
+              background-color: #09c;
+              height: 2px;
+              border: none;
+            }
+          </style>
+        </div>
+        <div class="modal-footer">
+          <h3>By Let's Meet</h3>
+        </div>
+      </div>
+    </div>
+
+    <div id="simpleModalC" class="modalC">
+      <div class="modal-content">
+        <div class="modal-header">
+          <span class="closeBtnC">&times;</span>
+
+          <h2>Meeting Minutes</h2>
+        </div>
+        <div class="modal-body">
+          <p><strong>Title:</strong> Meeting<br>
+            <strong>Date:</strong> Day 00/00/2016<br>
+            <strong>Time:</strong> 00:00AM - 00:00PM<br>
+            <strong>Location:</strong> Room</p>
+          <hr>
+
+          <p><strong>Heading Ordered list</strong></p>
+          <ol>
+            <li>Item</li>
+            <li>Item</li>
+            <li>Item</li>
+          </ol>
+          <p><strong>Task Assigned to Invitees</strong></p>
+          <p>A assigned to <span class="bold">abc@gmail.com</span></p>
+          <p>B assigned to <span class="bold">efg@gmail.com</span></p>
+          <style media="screen">
+            hr {
+              background-color: #bbb;
+              height: 2px;
+              border: none;
+            }
+
+            hr:nth-child(3) {
+              background-color: #09c;
+              height: 2px;
+              border: none;
+            }
+          </style>
+        </div>
+        <div class="modal-footer">
+          <h3>By Let's Meet</h3>
+        </div>
+      </div>
+    </div>
+
+    <div id="simpleModalD" class="modalD">
+      <div class="modal-content">
+        <div class="modal-header">
+          <span class="closeBtnD">&times;</span>
+
+          <h2>Meeting Minutes</h2>
+        </div>
+        <div class="modal-body">
+          <p><strong>Title:</strong> Meeting<br>
+            <strong>Date:</strong> Day 00/00/2016<br>
+            <strong>Time:</strong> 00:00AM - 00:00PM<br>
+            <strong>Location:</strong> Room</p>
+          <hr>
+
+          <p><strong>Heading Ordered list</strong></p>
+          <ol>
+            <li>Item</li>
+            <li>Item</li>
+            <li>Item</li>
+          </ol>
+          <p><strong>Task Assigned to Invitees</strong></p>
+          <p>A assigned to <span class="bold">abc@gmail.com</span></p>
+          <p>B assigned to <span class="bold">efg@gmail.com</span></p>
+          <style media="screen">
+            hr {
+              background-color: #bbb;
+              height: 2px;
+              border: none;
+            }
+
+            hr:nth-child(3) {
+              background-color: #09c;
+              height: 2px;
+              border: none;
+            }
+          </style>
+        </div>
+        <div class="modal-footer">
+          <h3>By Let's Meet</h3>
+        </div>
+      </div>
+    </div>
+
+    <div id="simpleModalE" class="modalE">
+      <div class="modal-content">
+        <div class="modal-header">
+          <span class="closeBtnE">&times;</span>
+
+          <h2>Meeting Minutes</h2>
+        </div>
+        <div class="modal-body">
+          <p><strong>Title:</strong> Meeting<br>
+            <strong>Date:</strong> Day 00/00/2016<br>
+            <strong>Time:</strong> 00:00AM - 00:00PM<br>
+            <strong>Location:</strong> Room</p>
+          <hr>
+
+          <p><strong>Heading Ordered list</strong></p>
+          <ol>
+            <li>Item</li>
+            <li>Item</li>
+            <li>Item</li>
+          </ol>
+          <p><strong>Task Assigned to Invitees</strong></p>
+          <p>A assigned to <span class="bold">abc@gmail.com</span></p>
+          <p>B assigned to <span class="bold">efg@gmail.com</span></p>
+          <style media="screen">
+            hr {
+              background-color: #bbb;
+              height: 2px;
+              border: none;
+            }
+
+            hr:nth-child(3) {
+              background-color: #09c;
+              height: 2px;
+              border: none;
+            }
+          </style>
+        </div>
+        <div class="modal-footer">
+          <h3>By Let's Meet</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- partial -->
+
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+  <script src='https://codepen.io/z-/pen/a8e37caf2a04602ea5815e5acedab458.js'></script>
+  <script src="/static/dashboard/script.js"></script>
+
+</body>
+
+</html>

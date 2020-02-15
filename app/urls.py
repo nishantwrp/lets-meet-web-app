@@ -3,5 +3,7 @@ from .views import *
 
 urlpatterns = [
     path('', indexView),
-    path('signup/', signUpView)
+    path('signup/', signUpView),
+    path('dashboard/', dashboardView),
+    path('schedule/', scheduleView)
 ]

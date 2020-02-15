@@ -1,0 +1,196 @@
+
+.checkbox {
+  padding-left: 20px;
+  outline: none !important;
+}
+.container{
+  background-color: rgba(255, 255, 255, 0.5);
+}
+.container div{
+  align-items: center;
+}
+input[type=radio] {
+    outline-color: transparent !important;
+}
+h1{
+  text-align: center;
+  transform: translateZ(100px);
+}
+
+.checkbox label {
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  padding-left: 5px;
+  font-size: 26px;
+  font-weight: bold;
+}
+
+.checkbox label::before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  width: 17px;
+  height: 17px;
+  left: 0;
+  margin-top: 10px;
+  margin-left: -20px;
+  border: 1px solid #cccccc;
+  border-radius: 3px;
+  background-color: #fff;
+  -webkit-transition: border 0.15s ease-in-out, color 0.15s ease-in-out;
+  -o-transition: border 0.15s ease-in-out, color 0.15s ease-in-out;
+  transition: border 0.15s ease-in-out, color 0.15s ease-in-out;
+}
+
+.checkbox label::after {
+  display: inline-block;
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  left: 0;
+  top: 0;
+    margin-top: 10px;
+  margin-left: -20px;
+  padding-left: 3px;
+  padding-top: 1px;
+  font-size: 11px;
+  color: #555555;
+}
+
+.checkbox input[type="checkbox"] {
+  opacity: 0;
+  z-index: 1;
+}
+
+/* .checkbox input[type="checkbox"]:focus + label::before {
+  outline: thin dotted;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+} */
+
+.checkbox input[type="checkbox"]:checked + label::after {
+  font-family: 'FontAwesome';
+  content: "\f00c";
+}
+
+
+.checkbox.checkbox-circle label::before {
+  border-radius: 50%;
+}
+
+.checkbox-info input[type="checkbox"]:checked + label::before {
+  background-color: #5bc0de;
+  border-color: #5bc0de;
+}
+
+.checkbox-info input[type="checkbox"]:checked + label::after {
+  color: #fff;
+}
+.container div{
+  margin-bottom: 50px;
+}
+.cubes .cube {
+  position: absolute;
+  height: 100px;
+  width: 100px;
+  margin: 0;
+  -webkit-animation: cube-fade-in 2s cubic-bezier(0.165, 0.84, 0.44, 1);
+          animation: cube-fade-in 2s cubic-bezier(0.165, 0.84, 0.44, 1);
+  will-change: transform;
+}
+@-webkit-keyframes cube-fade-in {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+  }
+}
+@keyframes cube-fade-in {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+  }
+}
+.cubes .cube * {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+.cubes .cube .shadow {
+  background: #07427a;
+  top: 40%;
+}
+.cubes .cube .sides {
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-perspective: 600px;
+          perspective: 600px;
+}
+.cubes .cube .sides div {
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  will-change: transform;
+}
+.cubes .cube .sides .front {
+  -webkit-transform: rotateY(0deg) translateZ(50px);
+          transform: rotateY(0deg) translateZ(50px);
+}
+.cubes .cube .sides .back {
+  -webkit-transform: rotateY(-180deg) translateZ(50px);
+          transform: rotateY(-180deg) translateZ(50px);
+}
+.cubes .cube .sides .left {
+  -webkit-transform: rotateY(-90deg) translateZ(50px);
+          transform: rotateY(-90deg) translateZ(50px);
+}
+.cubes .cube .sides .right {
+  -webkit-transform: rotateY(90deg) translateZ(50px);
+          transform: rotateY(90deg) translateZ(50px);
+}
+.cubes .cube .sides .top {
+  -webkit-transform: rotateX(90deg) translateZ(50px);
+          transform: rotateX(90deg) translateZ(50px);
+}
+.cubes .cube .sides .bottom {
+  -webkit-transform: rotateX(-90deg) translateZ(50px);
+          transform: rotateX(-90deg) translateZ(50px);
+}
+button{
+background-color: #69f0ae;
+color: black;
+border: 1px solid black !important;
+font-weight: bold;
+}
+::selection {
+  background: #ffb7b7; /* WebKit/Blink Browsers */
+}
+.event{
+  transform: translateZ(100px);
+}
+.bold{
+  font-weight: bold;
+}
+input{
+  transform: translateY(6px);
+  cursor: pointer;
+}
+@media screen and (orientation:landscape) {
+  .checkbox{
+    transform: translateX(300px);
+}}
+.user{
+  top: 0;
+  right: 0;
+  padding: 20px;
+}
+.user i{
+  padding: 10px;
+  font-size: 26px;
+  cursor:pointer;
+}
+.user a{
+  cursor: default;
+  color: #000;
+}
