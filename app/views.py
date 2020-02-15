@@ -99,3 +99,7 @@ def scheduleView(request):
         context['toast'] = True
 
     return render(request, 'schedule.html', context)
+
+def meetupView(request, pk):
+    context = []
+    return render(request, 'meetup.html',)
