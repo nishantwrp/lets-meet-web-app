@@ -6,5 +6,5 @@ urlpatterns = [
     path('signup/', signUpView),
     path('dashboard/', dashboardView),
     path('schedule/', scheduleView),
-    path('meetup/<int:pk>/', meetupView),
+    path('meet/<int:pk>/', meetupView),
 ]

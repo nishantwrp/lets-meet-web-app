@@ -101,5 +101,31 @@ def scheduleView(request):
     return render(request, 'schedule.html', context)
 
 def meetupView(request, pk):
-    context = []
-    return render(request, 'meetup.html',)
+    context = {}
+
+    def logout_user(request):
+        if 'logout' in request.GET:
+            if request.GET['logout'] == 'true':
+                logout(request)
+                return True
+        return False
+
+    context['name'] = request.user.first_name + ' ' + request.user.last_name
+
+    if request.method == 'POST':
+        minutes = request.POST['minutes']
+        headers = {
+            'Authorization': 'Token ' + request.user.username
+        }
+        requests.patch('https://lets-meet-backend.herokuapp.com/meets/' + str(pk) + '/', data={'minutes': minutes}, headers=headers)
+
+    r = send_api_request('meets/' + str(pk) + '/', request=request)
+
+    context['meet'] = r.json()
+
+    r = send_api_request('tasks/', request=request)
+
+    context['tasks'] = r.json()
+
+
+    return render(request, 'meetup.html', context)

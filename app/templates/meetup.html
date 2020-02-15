@@ -39,7 +39,7 @@
         <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
         </ul>
         <div class="mr-5">
-          username
+          {{name}}
         </div>
         <a href="?logout=true"><button class="btn btn-danger my-2 my-sm-0">Logout</button></a>
       </div>
@@ -47,53 +47,59 @@
   </nav>
   <div class="container search-box">
     <div class="card" style="width: 100%; height: 900px;">
-        <div class="card-body">
-        <h2 class="card-title">Card title</h2>
-        <h5 class="card-subtitle mb-2 text-muted">Creator</h5>
-        <h5 class="card-subtitle mb-2 text-muted">Members</h5>
-        <a href="#" class="card-link">Datetime</a>
-        <a href="#" class="card-link">Duration</a>
-        <p class="card-text">Quick sample text to create the card title and make up the body of the card's content.
+      <div class="card-body">
+        <h2 class="card-title">{{ meet.title }}</h2>
+        <h5 class="card-subtitle mb-2 text-muted">{{ meet.creator }}</h5>
+        <h5 class="card-subtitle mb-2 text-muted">{{ meet.members }}</h5>
+        <a href="#" class="card-link">{{meet.date_and_time}}</a>
+        <a href="#" class="card-link">{{ meet.duration }} hrs</a>
+        <p class="card-text">{{ meet.description }}
         </p>
         <br><br><br>
-        <div class="container text-center">
+        <form action="#" method="POST">
+          {% csrf_token %}
+          <div class="container text-center">
             <div class="row">
-                <div class="col-sm-6">
-                    <div class="form-group shadow-textarea">
-                        <label for="exampleFormControlTextarea6">Minutes</label>
-                        <textarea class="form-control z-depth-1" id="exampleFormControlTextarea6" rows="15" placeholder="Write something here..."></textarea>
-                      </div>
+              <div class="col-sm-6">
+                <div class="form-group shadow-textarea">
+                  <label for="exampleFormControlTextarea6">Minutes</label>
+                  <textarea class="form-control z-depth-1" id="exampleFormControlTextarea6" rows="15"
+                    placeholder="Write something here..." name="minutes" value="{{meet.minutes}}">{{ meet.minutes }}</textarea>
                 </div>
-                <div class="col-sm-6">
-                    <label for="exampleFormControlTextarea6">Tasks</label>
-                    <div class="card">
-                        <div class="card-body">
-                          <h5 class="card-title">Card title</h5>
-                          <h6 class="card-subtitle mb-2 text-muted">Assigned to</h6>
-                          <p class="card-text">Quick sample text to create the card title and make up the body of the card's content.</p>
+              </div>
+              <div class="col-sm-6">
+                <label for="exampleFormControlTextarea6">Tasks</label>
+                {% for task in tasks %}
+                <div class="card">
+                  <div class="card-body">
+                    <h5 class="card-title">{{ task.title }}</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Assigned To: Me</h6>
+                    <p class="card-text">{{ task.description }}</p>
 
-                        </div>
-                      </div>
+                  </div>
                 </div>
+                {% endfor %}
+              </div>
             </div>
             <div class="row justify-content-center mt-5">
-                <button class="btn btn-success my-2 my-sm-0">Submit</button>
+              <button class="btn btn-success my-2 my-sm-0">Submit</button>
             </div>
-        </div>
-        </div>
+          </div>
+        </form>
+      </div>
     </div>
-    </div>
+  </div>
 
 
-    <!-- Bootstrap Scripts -->
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
+  <!-- Bootstrap Scripts -->
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
     </script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
     </script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
     </script>
 
 </body>
