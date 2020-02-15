@@ -92,3 +92,7 @@ def scheduleView(request):
     context['name'] = request.user.first_name + ' ' + request.user.last_name
 
     return render(request, 'schedule.html', context)
+
+def meetupView(request, pk):
+    context = []
+    return render(request, 'meetup.html',)
