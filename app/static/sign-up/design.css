@@ -10,7 +10,6 @@ html{
 }
 @font-face {
 font-family: 'GOTHAM-MEDIUM';
-src: local('GOTHAM-MEDIUM'), url('../GOTHAM-MEDIUM.TTF') format('TTF');
 }
 @media screen and (min-width:580px) {
 
