@@ -42,7 +42,7 @@
         <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
         </ul>
         <div class="mr-5">
-          username
+          {{name}}
         </div>
         <a href="?logout=true"><button class="btn btn-danger my-2 my-sm-0">Logout</button></a>
       </div>
@@ -50,58 +50,21 @@
   </nav>
   <div class="container search-box">
     <div class="row mt-5">
+      {% for meet in meets %}
+      <a href = "/meet/{{meet.id}}" style="text-decoration: none; color: black;">
       <div class="col-sm-4">
         <div class="card" style="width: 18rem;">
           <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6> <!-- subtitle = creator -->
-            <p class="card-text">Quick sample text to create the card title and make up the body of the card's content.
+            <h5 class="card-title">{{ meet.title }}</h5>
+            <h6 class="card-subtitle mb-2 text-muted">{{meet.duration}} hrs</h6>
+            <p class="card-text">{{ meet.description }}
             </p>
-            <a href="#" class="card-link">Card link</a>
-            <a href="#" class="card-link">Another link</a>
+            <a href="#" class="card-link">{{ meet.creator }}</a>
           </div>
         </div>
       </div>
-      <div class="col-sm-4">
-        <div class="card" style="width: 18rem;">
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-            <p class="card-text">Quick sample text to create the card title and make up the body of the card's content.
-            </p>
-            <a href="#" class="card-link">Card link</a>
-            <a href="#" class="card-link">Another link</a>
-          </div>
-        </div>
-      </div>
-      <div class="col-sm-4">
-        <div class="card" style="width: 18rem;">
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-            <p class="card-text">Quick sample text to create the card title and make up the body of the card's content.
-            </p>
-            <a href="#" class="card-link">Card link</a>
-            <a href="#" class="card-link">Another link</a>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="row mt-5">
-      <div class="col-sm-4">
-        <div class="card" style="width: 18rem;">
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-            <p class="card-text">Quick sample text to create the card title and make up the body of the card's content.
-            </p>
-            <a href="#" class="card-link">Card link</a>
-            <a href="#" class="card-link">Another link</a>
-          </div>
-        </div>
-      </div>
-    </div>
-
+      </a>
+      {% endfor %}
 
     <!-- Bootstrap Scripts -->
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"

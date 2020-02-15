@@ -74,8 +74,13 @@ def dashboardView(request):
 
     r = send_api_request('meets/',request=request)
 
-    context['meets'] = r.json()
-
+    meets = r.json()
+    all_meets = list()
+    for meet in meets['created_meets']:
+        all_meets.append(meet)
+    for meet in meets['participating_meets']:
+        all_meets.append(meet)
+    context['meets'] = all_meets
     return render(request, 'dashboard.html', context)
 
 def scheduleView(request):
@@ -90,5 +95,7 @@ def scheduleView(request):
         return False
 
     context['name'] = request.user.first_name + ' ' + request.user.last_name
+    if request.method == 'POST':
+        context['toast'] = True
 
     return render(request, 'schedule.html', context)
